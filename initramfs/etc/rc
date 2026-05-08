@@ -3,4 +3,4 @@ mount -t proc proc /proc
 mount -t sysfs sysfs /sys
 clear
 cat /etc/banner
-echo "Welcome to Magnix"
+#echo "Welcome to Magnix"
