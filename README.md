@@ -34,8 +34,8 @@ architecturally closer to Plan 9 than a traditional Linux distro.
 | Version | Status | Description |
 |---------|--------|-------------|
 | 0.1 | ✅ Done | Own kernel + BusyBox compiled from source, shell prompt |
-| 0.2 | 🔨 In progress | ext4 filesystem + apk package manager |
-| 0.3 | Planned | Weston compositor on fbdev, software rendering |
+| 0.2 | ✅ Done | ext4 filesystem + apk package manager |
+| 0.3 | 🔨 In progress | Weston compositor on fbdev, software rendering |
 | 0.4 | Planned | Quake via SDL2 direct to framebuffer |
 | 1.0 | Planned | Live USB, boots straight into Quake |
  
@@ -104,6 +104,7 @@ cd ..
 ```
  
 ---
+There's also the `rb_initramfs.sh` script which automates this process for you. 
  
 ## Running in QEMU
  
@@ -115,6 +116,8 @@ qemu-system-x86_64 \
   -nographic \
   -append "console=ttyS0 rdinit=/bin/sh"
 ```
+You can also just use the included `run.sh` script which will be updated
+and (should) work the latest version. 
  
 Exit QEMU with `Ctrl+A` then `X` (the `:q!` of QEMU).
  
