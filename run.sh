@@ -6,4 +6,4 @@ qemu-system-x86_64 \
   -m 512M \
   -netdev user,id=net0 -device virtio-net-pci,netdev=net0 \
   -nographic \
-  -append "console=ttyS0 rdinit=/sbin/init"
+  -append "console=ttyS0 rdinit=/sbin/init quiet"
