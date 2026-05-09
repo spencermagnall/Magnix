@@ -5,6 +5,9 @@ no package manager bootstrapped from someone else's rootfs — just a custom ker
 a hand-built userland, and a clear picture of every layer in the stack.
  
 Built as a portfolio project and eventually a personal dev environment.
+
+
+![fastfetch demo](fastfetch.png "Title")
  
 ---
  
