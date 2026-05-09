@@ -113,7 +113,7 @@ qemu-system-x86_64 \
   -initrd initramfs.cpio.gz \
   -m 512M \
   -nographic \
-  -append "console=ttyS0 init=/sbin/init"
+  -append "console=ttyS0 rdinit=/bin/sh"
 ```
  
 Exit QEMU with `Ctrl+A` then `X` (the `:q!` of QEMU).
