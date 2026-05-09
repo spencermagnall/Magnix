@@ -1,0 +1,2 @@
+#!/bin/sh
+exec "${REALGCC:-gcc}" "$@" -specs "/home/spencer/my_distro/rootfs/usr/lib/musl-gcc.specs" -I/home/spencer/my_distro/rootfs/usr/include -D_GNU_SOURCE
