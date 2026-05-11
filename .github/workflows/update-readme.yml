@@ -1,0 +1,25 @@
+name: Update kernel build count
+
+on:
+  push:
+    paths:
+      - 'linux-6.8/.config'
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Get build number
+        run: |
+          BUILD=$(cat linux-6.8/include/generated/compile.h | grep "#define UTS_VERSION" | grep -o '#[0-9]*' | tr -d '#')
+          sed -i "s/Kernel recompiles: [0-9]*/Kernel recompiles: $BUILD/" README.md
+          
+      - name: Commit README
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'actions@github.com'
+          git add README.md
+          git commit -m "Update kernel recompile count" || exit 0
+          git push
