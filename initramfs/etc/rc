@@ -6,3 +6,6 @@ hostname magnix
 export TERM=xterm-256color
 export COLORTERM=truecolor
 cat /etc/magpie_banner
+# Mount and chroot
+mount /dev/vda1 /mnt
+chroot /mnt
